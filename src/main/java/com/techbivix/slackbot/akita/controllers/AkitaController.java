@@ -6,8 +6,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController("/slack")
 public class AkitaController {
-  @PostMapping("interactivity")
+  @PostMapping("/interactivity")
   public ResponseEntity<Object> InteractiveComponents(){
-    return ResponseEntity.ok().body("'links': ['bla','bla']");
+    return ResponseEntity.ok().body(new Object(){String text = "lista de links";});
+  }
+  @PostMapping("/slash")
+  public ResponseEntity<Object> slashCommans(){
+    return ResponseEntity.ok().body(new Object(){String text = "lista de links";});
   }
 }
