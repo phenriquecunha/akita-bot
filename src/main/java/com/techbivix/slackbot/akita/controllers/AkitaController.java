@@ -11,7 +11,7 @@ public class AkitaController {
     return ResponseEntity.ok().body(new Object(){String text = "lista de links";});
   }
   @PostMapping("/slash")
-  public ResponseEntity<Object> slashCommans(){
+  public ResponseEntity<Object> slashCommands(){
     return ResponseEntity.ok().body(new Object(){String text = "lista de links";});
   }
 }
