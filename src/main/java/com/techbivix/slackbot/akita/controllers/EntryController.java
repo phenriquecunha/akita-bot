@@ -6,8 +6,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class EntryController {
+
   @GetMapping("/")
   ResponseEntity<String> home(){
+
     return ResponseEntity.ok().body("Tá funfando fiote!");
   }
+
 }
