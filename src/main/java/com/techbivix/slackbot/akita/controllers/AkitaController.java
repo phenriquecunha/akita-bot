@@ -16,8 +16,8 @@ public class AkitaController {
 
 
   @PostMapping(value = "/**",
-  consumes = {MediaType.APPLICATION_FORM_URLENCODED_VALUE})
-  public ResponseEntity<Object> slashCommands(@RequestBody Object object) {
+  consumes = {"application/x-www-form-urlencoded;charset=UTF-8"})
+  public ResponseEntity<Object> slashCommands(Object object){
     return ResponseEntity.status(200).body(new Object() {
       public final Object response_type = "in_channel";
       public final Object text = "lista de links";
