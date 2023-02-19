@@ -1,6 +1,7 @@
 package com.techbivix.slackbot.akita.controllers;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +14,9 @@ public class AkitaController {
 //    });
 //  }
 
-  @PostMapping("/**")
+
+  @PostMapping(value = "/**",
+  consumes = {MediaType.APPLICATION_FORM_URLENCODED_VALUE})
   public ResponseEntity<Object> slashCommands(@RequestBody Object object) {
     return ResponseEntity.status(200).body(new Object() {
       public final Object response_type = "in_channel";
